@@ -8,14 +8,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.library.dto.LoginSimplesDTO;
+import br.com.library.util.General;
 
 @RestController
 @CrossOrigin("*")
 public class LoginController {
-
+	
+	General util;
+	
+	@SuppressWarnings("static-acces")
 	@GetMapping("/login")
 	public ResponseEntity<?> login() {
-		return ResponseEntity.status(201).body("hello");
+		return ResponseEntity.status(200).body("hello");
 	}
 
 	@GetMapping("/login/{id}")
