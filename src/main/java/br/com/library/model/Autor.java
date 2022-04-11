@@ -9,21 +9,25 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class Editora {
+public class Autor {
+
 	@Id
-	@Column(name = "ideditora")
+	@Column(name = "idautor")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idEditora;
-	
-	@Column(name  = "nome")
+	private Integer idAutor;
+
+	@Column(name = "nome", length = 100)
 	private String nome;
 
-	public Integer getIdEditora() {
-		return idEditora;
+	@Column(name = "idLivro", length = 45)
+	private String idLivro;
+
+	public Integer getIdAutor() {
+		return idAutor;
 	}
 
-	public void setIdEditora(Integer idEditora) {
-		this.idEditora = idEditora;
+	public void setIdAutor(Integer idAutor) {
+		this.idAutor = idAutor;
 	}
 
 	public String getNome() {
@@ -32,5 +36,13 @@ public class Editora {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getIdLivro() {
+		return idLivro;
+	}
+
+	public void setIdLivro(String idLivro) {
+		this.idLivro = idLivro;
 	}
 }
